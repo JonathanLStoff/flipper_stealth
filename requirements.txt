@@ -1,0 +1,12 @@
+# Flipper build toolchain (pulls the SDK on first `ufbt update`)
+ufbt>=0.2.6
+
+# scripts/install_to_sd.py
+pyserial>=3.5
+
+# Optional - only needed for `scripts/install_to_sd.py --serial`, the
+# experimental USB-serial install path. Not required if you install via
+# --sd-path (recommended). Left uncommented so `pip install -r
+# requirements.txt` gives you the option out of the box; delete this line
+# if you'd rather not pull it in.
+pyflipper>=0.4

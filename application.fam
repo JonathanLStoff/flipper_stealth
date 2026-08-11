@@ -1,0 +1,23 @@
+App(
+    # appid is also the build artifact's name - `ufbt build` produces
+    # stealth.fap, which is what the Makefile, the release workflow and
+    # scripts/install_to_sd.py all go looking for.
+    appid="stealth",
+    name="Stealth",
+    apptype=FlipperAppType.EXTERNAL,
+    entry_point="stealth_app",
+    stack_size=2 * 1024,
+    fap_category="Games",
+    fap_version="1.0",
+    fap_icon="icons/stealth_10px.png",
+    fap_description="Stealthy Fake Patient-monitor style display: heart rate with a trend graph and a cuff blood pressure reading. All values are simulated - this is a prop, it measures nothing.",
+    fap_author="You",
+    fap_weburl="https://github.com/yourname/flipper_stealth",
+    # ufbt's default sources=["*.c*"] globs the whole repo; scripts/ holds
+    # Python only today, but excluding it keeps a stray .c* there from being
+    # swept into the firmware build.
+    sources=[
+        "*.c*",
+        "!scripts",
+    ],
+)

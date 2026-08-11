@@ -1,3 +1,20 @@
+# Flipper build toolchain/output
+.ufbt/
+dist/
+build/
+*.fap
+# A literal "~" directory is what ufbt creates in the project when the Windows
+# HOME/USERPROFILE workaround in the Makefile fails to take effect.
+~/
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor/tooling
+.claude/
+.vscode/
+
 # Prerequisites
 *.d
 
@@ -53,3 +70,5 @@ dkms.conf
 
 # debug information files
 *.dwo
+~/
+.claude/
